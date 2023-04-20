@@ -1,0 +1,18 @@
+<html lang="en">
+    <%-include('../partials/head.ejs')%>
+    <body>
+        <%-include('../partials/nav.ejs')%>
+        <div class="todos content">
+            <h2>All Todos</h2>
+            <% if (todos.length > 0) { %> <% todos.forEach(todo => { %>
+            <a class="single" href="/todos/<%= todo._id %>">
+                <h3 class="title"><%= todo.title %></h3>
+                <p class="date">Created at: <%= todo.createdAt.toDateString() %></p>
+            </a>
+            <% }) %> <% } else { %>
+            <p>You are all done. No todo left...</p>
+            <% } %>
+        </div>
+        <%-include('../partials/footer.ejs')%>
+    </body>
+</html>

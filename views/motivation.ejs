@@ -1,0 +1,13 @@
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+    <body>
+        <%-include('./partials/nav.ejs')%>
+
+        <div class="about content">
+            <h2 class="quote"><%= quotes.quote %></h2>
+            <p class="author">~<%= quotes.author %></p>
+        </div>
+
+        <div><%-include('./partials/footer.ejs')%></div>
+    </body>
+</html>

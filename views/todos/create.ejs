@@ -1,0 +1,17 @@
+<html lang="en">
+    <%-include('../partials/head.ejs')%>
+    <body>
+        <%-include('../partials/nav.ejs')%>
+
+        <div class="create-todo content">
+            <form action="/todos" method="POST">
+                <label for="title">Todo title:</label>
+                <input type="text" id="title" name="title" required />
+                <label for="body">Todo description:</label>
+                <textarea id="body" name="body" required></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+        <%-include('../partials/footer.ejs')%>
+    </body>
+</html>
